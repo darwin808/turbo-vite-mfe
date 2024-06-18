@@ -5,6 +5,7 @@ import { defineConfig } from "vite";
 const remoteViteReactUrl =
   process.env.REMOTE_VITE_REACT_URL || `http://localhost:3001`;
 
+const port = 3000
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -20,10 +21,10 @@ export default defineConfig({
     }),
   ],
     server: {
-    port: 3000
+    port
   },
   preview: {
-    port: 5000
+    port
   },
   build: {
     modulePreload: false,
